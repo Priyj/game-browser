@@ -87,11 +87,7 @@ The application will be available at `http://localhost:5173`.
 To build the Docker image locally:
 
 ```bash
-# For ARM-based machines
-docker build -t game-browser -f Dockerfile.arm .
-
-# For AMD-based machines
-docker build -t game-browser -f Dockerfile.amd .
+docker build -t game-browser .
 ```
 
 ### Local Build
