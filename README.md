@@ -21,17 +21,41 @@ A modern web application for browsing and managing your favorite games using the
 - RAWG API
 - Axios
 - Font Awesome
+- Docker (for containerized deployment)
 
 ## Prerequisites
 
-Before running the application, make sure you have:
+Before running the application, make sure you have one of the following setups:
 
+### Option 1: Docker (Recommended)
+1. Docker installed on your system
+   - For macOS: [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop)
+   - For Windows: [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop)
+   - For Linux: [Docker Engine](https://docs.docker.com/engine/install/)
+
+### Option 2: Local Development
 1. Node.js (v14 or higher)
 2. npm or yarn
 3. RAWG API Key (get it from [https://rawg.io/apidocs](https://rawg.io/apidocs))
 4. Clerk Account and API Keys (get them from [https://clerk.dev](https://clerk.dev))
 
 ## Setup
+
+### Docker Setup (Recommended)
+
+For ARM-based machines (like Mac M1/M2):
+```bash
+docker run -p 3000:3000 priyj/game-browser
+```
+
+For AMD-based machines:
+```bash
+docker run -p 3000:3000 priyj/game-browser-amd
+```
+
+The application will be available at `http://localhost:3000`.
+
+### Local Development Setup
 
 1. Clone the repository:
 ```bash
@@ -59,6 +83,18 @@ The application will be available at `http://localhost:5173`.
 
 ## Building for Production
 
+### Docker Build
+To build the Docker image locally:
+
+```bash
+# For ARM-based machines
+docker build -t game-browser -f Dockerfile.arm .
+
+# For AMD-based machines
+docker build -t game-browser -f Dockerfile.amd .
+```
+
+### Local Build
 To create a production build:
 
 ```bash
