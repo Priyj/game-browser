@@ -1,11 +1,3 @@
-# Game Browser
-
-This repository contains the submission for the **MediaAmp Internship Assignment**.
-
-While the task assigned was primarily focused on frontend development, my background and primary interest lie in **DevOps**. As such, I approached this task from a DevOps perspective—containerizing the application with Docker, ensuring environment variables are handled securely, and making it deployment-ready for platforms like **AWS EC2** and **Render**.
-
-The frontend portion was implemented using tools and frameworks such as React, Redux, and Clerk for authentication. Where necessary, I used available resources and AI assistance to meet the task requirements efficiently and ensure the application functions correctly.
-
 ## Features
 
 - Browse games with advanced filtering options
